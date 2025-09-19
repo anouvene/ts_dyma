@@ -244,6 +244,8 @@ console.log(extendedObject.extendedProperty); // extended property value
 
 /**
  * Autre exemple d'interface étendant une classe
+ * Implémenter une interface qui étend une classe peut, dans certain cas, forcer l'héritage de cette classe
+ * avec des propriétés ou méthodes privées ou protégées.
  */
 
  class Player {
