@@ -12,7 +12,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/express-session": "^1.18.2",
+    "@types/lodash": "^4.17.20",
+    "@types/moment": "^2.11.29",
     "typescript": "^5.9.2",
     "vite": "^7.1.5"
+  },
+  "dependencies": {
+    "express-session": "^1.18.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.30.1"
   }
 }

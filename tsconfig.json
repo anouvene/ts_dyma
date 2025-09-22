@@ -2,14 +2,13 @@
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
     // File Layout
-    // "rootDir": "./src",
-    // "outDir": "./dist",
+    "outDir": "./dist", // Redirect output structure to the directory.
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "module": "nodenext",
     "target": "esnext",
-    "types": [],
+    //"types": [],
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
@@ -35,10 +34,25 @@
     // Recommended Options
     "strict": true,
     "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
+    //"verbatimModuleSyntax": true, // Pour que les imports de types fonctionnent
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
+
+    "baseUrl": ".",
+    // "paths": {
+    //   "*": ["*"]
+    // },
+    "esModuleInterop": true, // Pour permettre les imports de modules CommonJS avec la syntaxe ES6
+    "allowSyntheticDefaultImports": true, // Import de modules qui n’ont pas de default export comme s’ils en avaient un.
+                                          // Cela facilite l’écriture d’instructions d’importation avec la syntaxe import x from "module"
+
+    "allowJs": true, // TypeScript qu’il doit accepter et compiler les fichiers JavaScript (.js) en plus des fichiers TypeScript (.ts).
+
+    "typeRoots": [
+      "./node_modules/@types",
+      "./typings"
+    ] // Indique à TypeScript où chercher les fichiers de types. Par défaut, il cherche dans node_modules/@types. 
   }
 }
